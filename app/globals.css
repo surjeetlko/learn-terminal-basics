@@ -161,3 +161,87 @@
     @apply bg-background text-foreground;
   }
 }
+
+.guide-page {
+  --guide-paper: #f6f4ee;
+  --guide-ink: #20231f;
+  --guide-muted: #77796f;
+  --guide-line: #deddd4;
+  --guide-green: #3c6e50;
+  --guide-pale: #e8ede4;
+  --guide-code: #1d2420;
+  --guide-lime: #b6e07a;
+  min-height: 100vh;
+  background: var(--guide-paper);
+  color: var(--guide-ink);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+.guide-page * { box-sizing: border-box; }
+.guide-page a { color: inherit; }
+.guide-shell { width: min(100% - 48px, 1040px); margin: 0 auto; padding: 28px 0 70px; }
+.guide-topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 1px solid var(--guide-line); padding-bottom: 18px; color: var(--guide-muted); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+.guide-brand { color: var(--guide-green) !important; font-weight: 800; text-decoration: none; }
+.guide-brand span { color: var(--guide-muted); font-weight: 500; }
+.guide-hero { max-width: 760px; padding: 66px 0 42px; }
+.guide-eyebrow { color: var(--guide-green); font-size: 12px; font-weight: 750; letter-spacing: .13em; text-transform: uppercase; }
+.guide-eyebrow span { color: var(--guide-muted); }
+.guide-hero h1 { max-width: 750px; margin: 16px 0 22px; font-size: clamp(42px, 8vw, 78px); font-weight: 750; letter-spacing: -.065em; line-height: .98; }
+.guide-hero > p { max-width: 600px; margin: 0; color: #5d6058; font-size: 18px; }
+.guide-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 26px; color: var(--guide-muted); font-size: 11px; letter-spacing: .07em; text-transform: uppercase; }
+.guide-meta i { font-style: normal; }
+.guide-layout { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 54px; border-top: 1px solid var(--guide-line); padding-top: 32px; }
+.guide-nav { position: sticky; top: 20px; align-self: start; display: flex; flex-direction: column; gap: 7px; }
+.guide-nav h2 { margin: 0 0 5px; color: var(--guide-muted); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; }
+.guide-nav a { color: #6a6c64; font-size: 13px; text-decoration: none; transition: color .15s ease; }
+.guide-nav a:hover, .guide-nav a:focus-visible { color: var(--guide-green); }
+.guide-content { min-width: 0; }
+.guide-section { scroll-margin-top: 24px; margin-bottom: 34px; border-bottom: 1px solid var(--guide-line); padding-bottom: 38px; }
+.guide-section h2 { margin: 0 0 8px; font-size: 28px; letter-spacing: -.04em; line-height: 1.2; }
+.guide-section h3 { margin: 22px 0 10px; font-size: 16px; letter-spacing: -.02em; }
+.guide-section > p { margin: 0 0 20px; color: #64665e; }
+.guide-section code, .guide-tip code, .practice-card code { font-family: "Geist Mono", ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .92em; }
+.guide-section kbd, .guide-tip kbd { border: 1px solid #d6d4ca; border-radius: 4px; background: #e9e7de; padding: 2px 5px; font: 11px "Geist Mono", ui-monospace, monospace; }
+.guide-terminal { overflow: hidden; margin: 16px 0 10px; border-radius: 10px; background: var(--guide-code); color: #eef0e9; box-shadow: 0 10px 26px #20231f12; }
+.terminal-bar { display: flex; min-height: 41px; align-items: center; gap: 10px; border-bottom: 1px solid #ffffff18; padding: 9px 14px; color: #a7aea4; font-size: 11px; }
+.terminal-dots { display: flex; gap: 5px; }
+.terminal-dots i { width: 7px; height: 7px; border-radius: 50%; background: #778077; }
+.copy-button { margin-left: auto; border: 1px solid #ffffff32; border-radius: 5px; background: transparent; padding: 4px 8px; color: #c8d0c5; font-size: 11px; cursor: pointer; }
+.copy-button:hover { background: #ffffff13; }
+.copy-button:focus-visible { outline: 2px solid var(--guide-lime); outline-offset: 2px; }
+.terminal-code { overflow-x: auto; margin: 0; padding: 15px 18px; font: 13px/1.9 "Geist Mono", ui-monospace, SFMono-Regular, Consolas, monospace; }
+.terminal-line { display: grid; grid-template-columns: 13px minmax(max-content, auto) 1fr; column-gap: 9px; align-items: baseline; white-space: pre; }
+.terminal-prompt { color: var(--guide-lime); }
+.terminal-line code { color: #fff; font: inherit; }
+.terminal-comment { overflow: hidden; color: #96a092; text-overflow: ellipsis; }
+.terminal-output { grid-column: 2 / -1; color: #b8c0b3; }
+.guide-tip { margin-top: 15px; border-left: 3px solid var(--guide-green); background: var(--guide-pale); padding: 13px 15px; color: #414a41; font-size: 13px; }
+.command-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.command-card { min-width: 0; border: 1px solid var(--guide-line); border-radius: 8px; background: #fbfaf6; padding: 15px 16px; }
+.command-card > code { color: var(--guide-green); font-size: 12px; font-weight: 700; overflow-wrap: anywhere; }
+.command-card p { margin: 6px 0 0; color: #696b62; font-size: 13px; }
+.table-scroll { overflow-x: auto; }
+.guide-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.guide-table th { color: var(--guide-muted); font-size: 11px; letter-spacing: .08em; text-align: left; text-transform: uppercase; }
+.guide-table td, .guide-table th { border-bottom: 1px solid var(--guide-line); padding: 10px 8px; }
+.guide-table td code { color: var(--guide-green); }
+.practice-card { border-radius: 10px; background: #edece5; padding: 20px; }
+.practice-card h3 { margin: 0 0 5px; font-size: 17px; }
+.practice-card p { margin: 0; color: #64665e; font-size: 13px; }
+.practice-card ol { padding-left: 20px; font-size: 13px; }
+.practice-card li { padding: 3px 0; }
+.closing-copy { margin-top: 24px !important; }
+.guide-footer { display: flex; justify-content: space-between; gap: 12px; color: var(--guide-muted); font-size: 12px; }
+@media (max-width: 720px) {
+  .guide-shell { width: min(100% - 36px, 1040px); padding-top: 20px; }
+  .guide-topbar { align-items: flex-start; font-size: 10px; }
+  .guide-topbar > span:last-child { text-align: right; }
+  .guide-hero { padding: 48px 0 34px; }
+  .guide-layout { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+  .guide-nav { position: static; flex-direction: row; overflow-x: auto; gap: 14px; border-bottom: 1px solid var(--guide-line); padding-bottom: 12px; white-space: nowrap; }
+  .guide-nav h2 { display: none; }
+  .guide-nav a { flex: 0 0 auto; }
+  .command-grid { grid-template-columns: minmax(0, 1fr); }
+  .guide-section h2 { font-size: 25px; }
+  .guide-table { min-width: 520px; }
+}
